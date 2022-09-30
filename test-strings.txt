@@ -1,0 +1,11 @@
+CREATE TABLE BAZZLE( baz double PRIMARYKEY );
+create table foo(
+baz integer,
+bar Double notnull,
+primarykey( bar ),
+foreignkey( bar ) references bazzle( baz )
+);
+
+alter table foo add boo Integer default 10;
+update foo set bar = 1 - baz where baz > 3;
+
